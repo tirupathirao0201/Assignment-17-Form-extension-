@@ -1,0 +1,22 @@
+<div class="child" id="additionalChildId">
+    <div class="child">
+        <div class="inputItem">
+            <label for="additional">Additional</label>
+            <input type="text" id="additional" formControlName="additional" placeholder="Enter label for additional" #label>
+        </div>
+        <div class="dropdown">
+            <select id="additionaldropdown" #selectdrop (change)="handleAdditionalValue(input,selectdrop,label)">
+                <option value="number">Number</option>
+                <option value="boolean">Boolean</option>
+                <option value="colorcode">Color Code</option>
+                <option value="binary">Binary</option>
+                <option value="string">String</option>
+            </select>
+            <input type="text" placeholder="Enter value for additional" #input (blur)="handleAdditionalValue(input,selectdrop,label)">
+        </div>
+    </div>
+    <div class="child">
+        <p id="enteredadditionallabel" >Entered Additional Label:{{addiInputLabel}}</p>
+        <p id="enteredadditionallabel">Entered Additional Label:{{addiInputValue}}</p>
+    </div>
+</div>

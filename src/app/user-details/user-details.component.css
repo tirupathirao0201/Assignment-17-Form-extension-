@@ -1,0 +1,26 @@
+/* table,th,td{
+    border: 2px solid green;
+    border-collapse: collapse;
+} */
+h3{
+    text-align: center;
+    color: green;
+    padding: 10px;
+}
+h4{
+    text-align: center;
+}
+.details-container{
+    display: flex;
+    margin-top: 10px;
+}
+.user-container{
+    width: 50%;
+    border: 2px solid green;
+}
+.additional-container{
+    border: 2px solid green;
+    width: 50%;
+}
+
+/* Dummy comment */

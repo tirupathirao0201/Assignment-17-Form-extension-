@@ -1,0 +1,22 @@
+<h3>Successfully submitted</h3>
+<div class="details-container">
+    <div class="user-container">
+        <h4>User Details</h4>
+        <div>
+            <p>name : {{userData.firstName +" "+userData.lastName}}</p>
+            <p>age : {{userData.age}}</p>
+            <p>username : {{userData.userName}}</p>
+            <p><span>Email: </span><span>{{userData.email}}</span></p>
+            <p><span>Phone no: </span><span>{{userData.mobileNo}}</span></p>
+        </div>
+    </div>
+    <div class="additional-container">
+        <h4>Additional Details</h4>
+        <div *ngFor="let item of userAdditional;let i=index">
+             <div>
+                <p><span>{{i+1+"  "}}</span><span>Given Label : {{item[0]}}</span><br><span>&nbsp;&nbsp;Given Value :{{item[1]}}</span></p>
+             </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,21 @@
+select{
+    padding: 2px;
+}
+.child{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 15px;
+}
+.inputItem{
+display: flex;
+justify-content: space-between;
+}
+.dropdown{
+    margin: auto;
+}
+#additionalChildId{
+    padding: 10px;
+    border: 2px solid red;
+    margin-top: 10px;
+}

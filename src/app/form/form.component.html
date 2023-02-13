@@ -1,0 +1,84 @@
+<div class="form">
+    <form [formGroup]="reactiveForm" (ngSubmit)="validateForm()">
+        <h2>Registration Form</h2>
+        <div class="inputitem">
+            <div>
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" formControlName="firstName" placeholder="Enter First Name">
+            </div>
+            <div class="error" *ngIf="! reactiveForm.get('firstName').valid && reactiveForm.get('firstName').touched">
+                {{reactiveForm.get('firstName').errors['msg']}}</div>
+        </div>
+        <div class="inputitem">
+            <div>
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lasttname" formControlName="lastName" placeholder="Enter Last Name">
+            </div>
+            <div class="error" *ngIf="! reactiveForm.get('lastName').valid && reactiveForm.get('lastName').touched">
+                {{reactiveForm.get('lastName').errors['msg']}}
+            </div>
+        </div>
+        <div class="inputitem">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" formControlName="userName" placeholder="User Name">
+            </div>
+            <div class="error" *ngIf="! reactiveForm.get('userName').valid && reactiveForm.get('userName').touched">
+                {{reactiveForm.get('userName').errors['msg']}}</div>
+        </div>
+        <div class="inputitem gap">
+            <div>
+                <label for="age">Age</label>
+                <input type="number" id="age" formControlName="age" placeholder="Enter age"><br>
+            </div>
+            <div class="error" *ngIf="! reactiveForm.get('age').valid && reactiveForm.get('age').touched">
+                {{reactiveForm.get('age').errors['msg']}}</div>
+        </div>
+        <div class="inputitem">
+            <div>
+                <label for="email">Email</label>
+                <input type="text" id="email" formControlName="email" placeholder="Enter mail">
+            </div>
+            <div class="error" *ngIf="! reactiveForm.get('email').valid && reactiveForm.get('email').touched">
+                {{reactiveForm.get('email').errors['msg']}}</div>
+        </div>
+        <div class="inputitem">
+            <div>
+                <label for="mobileno">Mobile No</label>
+                <input type="text" id="mobileno" formControlName="mobileNo" placeholder="Enter 10 digits mobile no">
+            </div>
+            <div class="error" *ngIf="! reactiveForm.get('mobileNo').valid && reactiveForm.get('mobileNo').touched">
+                {{reactiveForm.get('mobileNo').errors['msg']}}</div>
+        </div>
+        <!-- <div class="inputitem">
+            <div>
+            <label for="additional">Additional</label>
+            <input type="text" id="additional" formControlName="additional" placeholder="Enter label for additional" #>
+            </div>
+            <div class="error" *ngIf="! reactiveForm.get('additional').valid && reactiveForm.get('additional').touched">{{additionalError}}</div>
+        </div>
+        <app-additional class="inputitem" (additionalInput)="handleAdditionInput($event)" (showError)=isError($event)></app-additional>
+        <div class="error" *ngIf="typeMismatchError">Selected type & entered value are different</div>
+        <div class="insidecomp">
+            <div class="inputitem">
+                <p id="enteredadditionallabel">Entered Additional Label: {{addiLabelValue}}</p>
+
+            </div>
+            <div class="inputitem">
+                <p id="enteredadditionalvalue">Entered Additional value:{{addiValue}}</p>
+            </div>
+        </div> -->
+        <app-additional (additionalInput)="handleAdditionInput($event)" (showError)="isError($event)"></app-additional>
+        <div *ngFor="let item of addedList;let i = index">
+                <app-additional (additionalInput)="handleAdditionInput($event)" (showError)="isError($event)"></app-additional>
+        </div>
+        <div class="error" *ngIf="typeMismatchError">Selected type & entered value are different</div>
+        <button title="Click here to add additional details" (click)="handleAdditionalClick($event)" id="addButton">ADD</button>
+        <div class="buttons">
+            <input type="reset" value="reset">
+            <input type="submit" value="Submit" >
+        </div>
+
+    </form>
+</div>
+<!-- [disabled]="!reactiveForm.valid" -->

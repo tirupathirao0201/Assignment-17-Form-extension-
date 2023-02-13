@@ -1,0 +1,62 @@
+input.ng-invalid.ng-touched{
+    border: 1.5px solid red;
+}
+.error{
+    color:red;
+}
+h2{
+    text-align: center;
+}
+form{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* height: 500px; */
+    margin: 10px auto;
+    width: 400px;
+    background-color: #93BFCF;
+    padding: 15px;
+}
+.inputitem{
+    display: block;
+}
+.inputitem > div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.gap{
+    gap: 203px;
+}
+#age{
+    margin-left: 177px;
+}
+#addButton{
+    margin-top: 10px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.buttons > input{
+    padding: 10px;
+    border-radius: 75px;
+    border: none;
+}
+input[type="submit"]{
+    background-color: #54B435;
+}
+input[type="reset"]{
+    background-color: red;
+}
+/* app-additional{
+    padding: 2px;
+    border: 2px solid;
+} */
+
+/* .insidecomp{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+} */

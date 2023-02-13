@@ -1,0 +1,17 @@
+h3{
+    background-color: #82CD47;
+}
+
+div > h3{
+    text-align: center;
+    display: inline;
+    margin-left: 520px;
+}
+div > p{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    color: blueviolet;
+    margin: 10px auto;
+}
